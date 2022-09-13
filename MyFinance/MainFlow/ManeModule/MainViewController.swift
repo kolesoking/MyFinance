@@ -72,7 +72,6 @@ private extension MainViewController {
         lastOperationsTableView.delegate = self
         
         lastOperationsTableView.backgroundColor = Colors.mainBackgroundColor
-//        lastOperationsTableView.isUserInteractionEnabled = false
     }
 }
 
@@ -136,9 +135,13 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.selectedBackgroundView?.layer.cornerRadius = 12
-        tableView.cellForRow(at: indexPath)?.selectedBackgroundView?.backgroundColor = Colors.cellBackgroundColor
-    }
+        let ditailVC = DitailViewController()
+        navigationController?.pushViewController(ditailVC, animated: true)
+   
+//
+//        tableView.cellForRow(at: indexPath)?.selectedBackgroundView?.layer.cornerRadius = 12
+//        tableView.cellForRow(at: indexPath)?.selectedBackgroundView?.backgroundColor = Colors.cellBackgroundColor
+        }
 }
 
 
