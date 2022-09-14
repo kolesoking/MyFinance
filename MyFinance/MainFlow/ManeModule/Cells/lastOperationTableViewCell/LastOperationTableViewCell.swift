@@ -9,8 +9,6 @@ import UIKit
 
 class LastOperationTableViewCell: UITableViewCell {
     
-    let id = "lastOperation"
-    
     // MARK: - Views
     
     @IBOutlet weak var bacgroundViewCell: UIView!
@@ -59,7 +57,7 @@ class LastOperationTableViewCell: UITableViewCell {
     private func configureAppearance() {
         
         backgroundColor = Colors.mainBackgroundColor
-        
+
         // MARK: - bacgroundViewCell
         
         bacgroundViewCell.backgroundColor = Colors.cellBackgroundColor
