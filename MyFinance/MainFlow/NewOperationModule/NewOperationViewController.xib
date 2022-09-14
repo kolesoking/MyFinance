@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewOperationViewController" customModule="MyFinance" customModuleProvider="target">
             <connections>
-                <outlet property="descriptionTextField" destination="IHc-DL-qeT" id="dAI-WB-nDl"/>
+                <outlet property="descriptionTextView" destination="e4J-GF-meD" id="zl7-k5-uDk"/>
                 <outlet property="mainLabel" destination="u6W-nm-16S" id="XSj-Pq-byJ"/>
                 <outlet property="moneyTextField" destination="K3G-Yn-uOw" id="JOk-2H-TS9"/>
                 <outlet property="operationSegmentedView" destination="5bA-Th-8xi" id="NtG-6T-N2W"/>
@@ -35,19 +35,12 @@
                         <segment title="First"/>
                         <segment title="Second"/>
                     </segments>
+                    <color key="tintColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </segmentedControl>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K3G-Yn-uOw">
                     <rect key="frame" x="8" y="136" width="80" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="pio-QQ-QRv"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IHc-DL-qeT">
-                    <rect key="frame" x="8" y="186" width="398" height="200"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="200" id="H6h-Ht-LCJ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -59,33 +52,46 @@
                         <constraint firstAttribute="height" constant="60" id="Fjj-Gx-ZWe"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
                     <connections>
                         <action selector="saveOperationButtonPresed:" destination="-1" eventType="touchUpInside" id="N0H-0b-z52"/>
                     </connections>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4J-GF-meD">
+                    <rect key="frame" x="8" y="186" width="398" height="300"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="O4G-wA-hPX"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="5bA-Th-8xi" firstAttribute="top" secondItem="u6W-nm-16S" secondAttribute="bottom" constant="16" id="2oN-Xf-XOw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e4J-GF-meD" secondAttribute="trailing" constant="8" id="34L-rE-Nmo"/>
                 <constraint firstItem="00N-C6-dG7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="DFJ-pR-hnl"/>
                 <constraint firstItem="00N-C6-dG7" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="DWZ-pe-r3c"/>
                 <constraint firstItem="K3G-Yn-uOw" firstAttribute="top" secondItem="5bA-Th-8xi" secondAttribute="bottom" constant="16" id="Do8-cB-TUc"/>
+                <constraint firstItem="e4J-GF-meD" firstAttribute="top" secondItem="K3G-Yn-uOw" secondAttribute="bottom" constant="16" id="GTi-5F-Lrb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="00N-C6-dG7" secondAttribute="trailing" constant="8" id="Lrt-Iq-Vwx"/>
-                <constraint firstItem="IHc-DL-qeT" firstAttribute="top" secondItem="K3G-Yn-uOw" secondAttribute="bottom" constant="16" id="U6w-2p-F6X"/>
+                <constraint firstItem="e4J-GF-meD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="NAd-j7-rE2"/>
                 <constraint firstItem="u6W-nm-16S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="W6A-xc-AVF"/>
                 <constraint firstItem="K3G-Yn-uOw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="bzl-IH-hdT"/>
                 <constraint firstItem="u6W-nm-16S" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="cax-5b-bpp"/>
                 <constraint firstItem="5bA-Th-8xi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="dqT-Nz-YL7"/>
-                <constraint firstItem="IHc-DL-qeT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="fNB-u6-F7P"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IHc-DL-qeT" secondAttribute="trailing" constant="8" id="jEU-wo-rMN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5bA-Th-8xi" secondAttribute="trailing" constant="8" id="kw0-C3-5mp"/>
             </constraints>
             <point key="canvasLocation" x="139" y="75"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
