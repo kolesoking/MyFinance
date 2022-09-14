@@ -24,6 +24,7 @@
 		AD2D7EA428D0AD0D0022CA17 /* DitailTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2D7EA228D0AD0D0022CA17 /* DitailTitleTableViewCell.xib */; };
 		AD2D7EA828D0D6E20022CA17 /* DitailDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D7EA628D0D6E20022CA17 /* DitailDescriptionTableViewCell.swift */; };
 		AD2D7EA928D0D6E20022CA17 /* DitailDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2D7EA728D0D6E20022CA17 /* DitailDescriptionTableViewCell.xib */; };
+		AD2D7EB028D1EC1B0022CA17 /* TypeOfOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D7EAF28D1EC1B0022CA17 /* TypeOfOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		AD2D7EA228D0AD0D0022CA17 /* DitailTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DitailTitleTableViewCell.xib; sourceTree = "<group>"; };
 		AD2D7EA628D0D6E20022CA17 /* DitailDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DitailDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		AD2D7EA728D0D6E20022CA17 /* DitailDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DitailDescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		AD2D7EAF28D1EC1B0022CA17 /* TypeOfOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			children = (
 				AD2D7E8E28CF9E360022CA17 /* Colors.swift */,
 				AD2D7E9028CFA33D0022CA17 /* Icons.swift */,
+				AD2D7EAF28D1EC1B0022CA17 /* TypeOfOperation.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				AD2D7E8F28CF9E360022CA17 /* Colors.swift in Sources */,
 				AD2D7EA828D0D6E20022CA17 /* DitailDescriptionTableViewCell.swift in Sources */,
 				AD2D7E9128CFA33D0022CA17 /* Icons.swift in Sources */,
+				AD2D7EB028D1EC1B0022CA17 /* TypeOfOperation.swift in Sources */,
 				AD2D7E9F28D0A1F20022CA17 /* DitailViewController.swift in Sources */,
 				AD2D7E8528CF7AAE0022CA17 /* ActionCollectionViewCell.swift in Sources */,
 				AD2D7EA328D0AD0D0022CA17 /* DitailTitleTableViewCell.swift in Sources */,

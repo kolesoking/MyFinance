@@ -13,10 +13,17 @@ class DitailTitleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var currencyImage: UIImageView!
     @IBOutlet weak var moneyLabel: UILabel!
+    @IBOutlet weak var typeOfOperationLabel: UILabel!
+    
+    // MARK: - Calculated
+    
+    var operationType: String? {
+        return isReseiving ? "Cтрижка" : "Покупка"
+    }
     
     // MARK: - Properties
     
-    var currencyImageString = Icons.ruble {
+    var currencyImageString: String = Icons.ruble {
         didSet {
             currencyImage.image = UIImage(named: currencyImageString)
         }
@@ -28,6 +35,10 @@ class DitailTitleTableViewCell: UITableViewCell {
         }
     }
     
+    var isReseiving: Bool = true
+    
+    
+    
     // MARK: - UITableView
 
     override func awakeFromNib() {
@@ -35,12 +46,7 @@ class DitailTitleTableViewCell: UITableViewCell {
         
         configureAppearance()
     }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
+    
      // MARK: - Private Methods
     
     func configureAppearance() {
@@ -51,5 +57,9 @@ class DitailTitleTableViewCell: UITableViewCell {
         
         moneyLabel.font = .systemFont(ofSize: 34, weight: .light)
         moneyLabel.textColor = Colors.mainTextColor
+        
+        typeOfOperationLabel.font = .systemFont(ofSize: 34, weight: .bold)
+        typeOfOperationLabel.textColor = Colors.mainTextColor
+        typeOfOperationLabel.text = operationType
     }
 }
