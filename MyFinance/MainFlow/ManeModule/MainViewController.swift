@@ -110,6 +110,20 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         return CGSize(width: width, height: height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            let newOperationVC = NewOperationViewController()
+            present(newOperationVC, animated: true)
+        case 1:
+            print("2")
+        case 2:
+            print("3")
+        default:
+            print("KOLESO")
+        }
+    }
 }
 
 // MARK: - lastOperationsTableView
