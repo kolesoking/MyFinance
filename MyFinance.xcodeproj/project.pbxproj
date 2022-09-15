@@ -27,6 +27,10 @@
 		AD2D7EB028D1EC1B0022CA17 /* TypeOfOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D7EAF28D1EC1B0022CA17 /* TypeOfOperation.swift */; };
 		AD2D7EB428D1FE9C0022CA17 /* NewOperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D7EB228D1FE9C0022CA17 /* NewOperationViewController.swift */; };
 		AD2D7EB528D1FE9C0022CA17 /* NewOperationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2D7EB328D1FE9C0022CA17 /* NewOperationViewController.xib */; };
+		AD2D7EB928D3240C0022CA17 /* OperationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D7EB728D3240C0022CA17 /* OperationListViewController.swift */; };
+		AD2D7EBA28D3240C0022CA17 /* OperationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2D7EB828D3240C0022CA17 /* OperationListViewController.xib */; };
+		AD2D7EBE28D326620022CA17 /* OperationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2D7EBC28D326620022CA17 /* OperationCollectionViewCell.swift */; };
+		AD2D7EBF28D326620022CA17 /* OperationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2D7EBD28D326620022CA17 /* OperationCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		AD2D7EAF28D1EC1B0022CA17 /* TypeOfOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfOperation.swift; sourceTree = "<group>"; };
 		AD2D7EB228D1FE9C0022CA17 /* NewOperationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOperationViewController.swift; sourceTree = "<group>"; };
 		AD2D7EB328D1FE9C0022CA17 /* NewOperationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewOperationViewController.xib; sourceTree = "<group>"; };
+		AD2D7EB728D3240C0022CA17 /* OperationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationListViewController.swift; sourceTree = "<group>"; };
+		AD2D7EB828D3240C0022CA17 /* OperationListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationListViewController.xib; sourceTree = "<group>"; };
+		AD2D7EBC28D326620022CA17 /* OperationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCollectionViewCell.swift; sourceTree = "<group>"; };
+		AD2D7EBD28D326620022CA17 /* OperationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 				AD2D7E7828CF6FD10022CA17 /* ManeModule */,
 				AD2D7E9228D0969E0022CA17 /* DitailModule */,
 				AD2D7EB128D1FDE50022CA17 /* NewOperationModule */,
+				AD2D7EB628D323CD0022CA17 /* OperationListModule */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
@@ -205,6 +214,25 @@
 			path = NewOperationModule;
 			sourceTree = "<group>";
 		};
+		AD2D7EB628D323CD0022CA17 /* OperationListModule */ = {
+			isa = PBXGroup;
+			children = (
+				AD2D7EBB28D326410022CA17 /* Cells */,
+				AD2D7EB728D3240C0022CA17 /* OperationListViewController.swift */,
+				AD2D7EB828D3240C0022CA17 /* OperationListViewController.xib */,
+			);
+			path = OperationListModule;
+			sourceTree = "<group>";
+		};
+		AD2D7EBB28D326410022CA17 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AD2D7EBC28D326620022CA17 /* OperationCollectionViewCell.swift */,
+				AD2D7EBD28D326620022CA17 /* OperationCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,10 +295,12 @@
 				AD2D7EA028D0A1F20022CA17 /* DitailViewController.xib in Resources */,
 				AD2D7EB528D1FE9C0022CA17 /* NewOperationViewController.xib in Resources */,
 				AD2D7E8B28CF7F070022CA17 /* LastOperationTableViewCell.xib in Resources */,
+				AD2D7EBF28D326620022CA17 /* OperationCollectionViewCell.xib in Resources */,
 				AD2D7E7C28CF706F0022CA17 /* MainViewController.xib in Resources */,
 				AD2D7E8628CF7AAE0022CA17 /* ActionCollectionViewCell.xib in Resources */,
 				AD2D7EA928D0D6E20022CA17 /* DitailDescriptionTableViewCell.xib in Resources */,
 				AD2D7EA428D0AD0D0022CA17 /* DitailTitleTableViewCell.xib in Resources */,
+				AD2D7EBA28D3240C0022CA17 /* OperationListViewController.xib in Resources */,
 				AD2D7E6C28CF6E3B0022CA17 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,11 +316,13 @@
 				AD2D7E6328CF6E390022CA17 /* AppDelegate.swift in Sources */,
 				AD2D7E8F28CF9E360022CA17 /* Colors.swift in Sources */,
 				AD2D7EA828D0D6E20022CA17 /* DitailDescriptionTableViewCell.swift in Sources */,
+				AD2D7EB928D3240C0022CA17 /* OperationListViewController.swift in Sources */,
 				AD2D7E9128CFA33D0022CA17 /* Icons.swift in Sources */,
 				AD2D7EB028D1EC1B0022CA17 /* TypeOfOperation.swift in Sources */,
 				AD2D7E9F28D0A1F20022CA17 /* DitailViewController.swift in Sources */,
 				AD2D7E8528CF7AAE0022CA17 /* ActionCollectionViewCell.swift in Sources */,
 				AD2D7EA328D0AD0D0022CA17 /* DitailTitleTableViewCell.swift in Sources */,
+				AD2D7EBE28D326620022CA17 /* OperationCollectionViewCell.swift in Sources */,
 				AD2D7E8A28CF7F070022CA17 /* LastOperationTableViewCell.swift in Sources */,
 				AD2D7E7B28CF706F0022CA17 /* MainViewController.swift in Sources */,
 			);

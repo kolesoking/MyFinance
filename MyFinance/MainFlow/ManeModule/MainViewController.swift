@@ -117,9 +117,11 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             let newOperationVC = NewOperationViewController()
             present(newOperationVC, animated: true)
         case 1:
-            print("2")
+            let operationListVC = OperationListViewController()
+            present(operationListVC, animated: true)
         case 2:
-            print("3")
+            let operationListVC = OperationListViewController()
+            present(operationListVC, animated: true)
         default:
             print("KOLESO")
         }
@@ -151,11 +153,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let ditailVC = DitailViewController()
         navigationController?.pushViewController(ditailVC, animated: true)
-   
-//
-//        tableView.cellForRow(at: indexPath)?.selectedBackgroundView?.layer.cornerRadius = 12
-//        tableView.cellForRow(at: indexPath)?.selectedBackgroundView?.backgroundColor = Colors.cellBackgroundColor
-        }
+    }
 }
 
 
