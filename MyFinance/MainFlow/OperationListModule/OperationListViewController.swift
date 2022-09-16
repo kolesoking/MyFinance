@@ -31,7 +31,11 @@ class OperationListViewController: UIViewController {
 private extension OperationListViewController {
     
     func configureAppearance() {
+        
+        view.backgroundColor = Colors.mainBackgroundColor
+        
         configureCollectionView()
+        configureNavigationBar()
     }
     
     func configureCollectionView() {
@@ -43,6 +47,15 @@ private extension OperationListViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+    
+    func configureNavigationBar() {
+        
+        navigationController?.navigationBar.barTintColor = Colors.mainTintColor
+        navigationController?.navigationBar.tintColor = Colors.mainTintColor
+        
+        let customTitleView = createCustomTitleView(totalMoney: "1200", imageCurrencyString: Icons.ruble)
+        navigationItem.titleView = customTitleView
     }
 }
 
