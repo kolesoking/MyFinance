@@ -73,4 +73,9 @@ extension OperationListViewController: UICollectionViewDataSource, UICollectionV
         
         return CGSize(width: widht, height: 80)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let ditailVC = DitailViewController()
+        present(ditailVC, animated: true)
+    }
 }

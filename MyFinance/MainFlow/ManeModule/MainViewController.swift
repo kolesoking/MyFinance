@@ -118,7 +118,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             present(newOperationVC, animated: true)
         case 1:
             let operationListVC = OperationListViewController()
-            present(operationListVC, animated: true)
+            navigationController?.pushViewController(operationListVC, animated: true)
         case 2:
             let operationListVC = OperationListViewController()
             present(operationListVC, animated: true)
