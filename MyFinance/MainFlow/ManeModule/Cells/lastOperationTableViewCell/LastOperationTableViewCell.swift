@@ -9,6 +9,15 @@ import UIKit
 
 class LastOperationTableViewCell: UITableViewCell {
     
+    struct Money {
+        var color: UIColor
+        var symbol: String
+        
+        static func set(color: UIColor, symbol: String) -> Money {
+            Money(color: color, symbol: symbol)
+        }
+    }
+    
     // MARK: - Views
     
     @IBOutlet weak var bacgroundViewCell: UIView!
@@ -17,11 +26,12 @@ class LastOperationTableViewCell: UITableViewCell {
     
     // MARK: - Calculated
     
-    var moneyColor: UIColor? {
-        return isReseiving ? .green : .red
+    var money1: Money {
+        return isReseiving ? Money.set(color: Colors.reseivingMoneyColor, symbol: "+") : Money.set(color: Colors.giveAwayMoneyColor, symbol: "-")
     }
     
     // MARK: - Properties
+    
     
     var name = "" {
         didSet {
@@ -31,18 +41,17 @@ class LastOperationTableViewCell: UITableViewCell {
     
     var money = "" {
         didSet {
-            moneyLabel.text = money
+            moneyLabel.text = "\(money)"
         }
     }
     
     var isReseiving: Bool = true {
         didSet {
-            moneyLabel.textColor = moneyColor
+            moneyLabel.textColor = money1.color
+            
+            moneyLabel.text = "\(money1.symbol) \(money)"
         }
     }
-    
-    
-    
     
     // MARK: - UITableViewCell
     
@@ -71,6 +80,6 @@ class LastOperationTableViewCell: UITableViewCell {
         // MARK: - moneyLabel
         
         moneyLabel.font = .systemFont(ofSize: 24, weight: .light)
-        moneyLabel.textColor = moneyColor
+        moneyLabel.textColor = money1.color
     }
 }
