@@ -121,7 +121,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             navigationController?.pushViewController(operationListVC, animated: true)
         case 2:
             let operationListVC = OperationListViewController()
-            present(operationListVC, animated: true)
+            navigationController?.pushViewController(operationListVC, animated: true)
         default:
             print("KOLESO")
         }
@@ -146,6 +146,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.money = "1000"
         cell.name = "Sergey"
+        cell.isReseiving = true
         
         return cell
     }
