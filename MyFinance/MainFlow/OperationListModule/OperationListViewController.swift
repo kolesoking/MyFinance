@@ -37,12 +37,7 @@ private extension OperationListViewController {
         configureCollectionView()
         configureNavigationBar()
         
-        let navBarAppearance = UINavigationBarAppearance()
-        
-        navBarAppearance.backgroundColor = Colors.mainBackgroundColor
-        
-        navigationController?.navigationBar.standardAppearance = navBarAppearance
-        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        setNavBar()
     }
     
     func configureCollectionView() {

@@ -16,7 +16,7 @@ extension UIViewController {
         
         let imageCurrency = UIImageView()
         imageCurrency.image = UIImage(named: imageCurrencyString)
-        imageCurrency.frame = CGRect(x: 5, y: 0, width: 45, height: 45)
+        imageCurrency.frame = CGRect(x: 5, y: 0, width: 40, height: 40)
         view.addSubview(imageCurrency)
         
         let totalMoneyLabel = UILabel()
@@ -27,5 +27,16 @@ extension UIViewController {
         view.addSubview(totalMoneyLabel)
          
         return view
+    }
+    
+    func setNavBar() {
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        
+        navBarAppearance.backgroundColor = Colors.mainBackgroundColor
+        
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+
     }
 }
