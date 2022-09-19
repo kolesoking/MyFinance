@@ -118,12 +118,14 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             present(newOperationVC, animated: true)
         case 1:
             let operationListVC = OperationListViewController()
+            operationListVC.isReseiving = true
             navigationController?.pushViewController(operationListVC, animated: true)
         case 2:
             let operationListVC = OperationListViewController()
+            operationListVC.isReseiving = false
             navigationController?.pushViewController(operationListVC, animated: true)
         default:
-            print("KOLESO")
+            break
         }
     }
 }

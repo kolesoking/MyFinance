@@ -17,6 +17,8 @@ class OperationListViewController: UIViewController {
     
     var operations: [String] = []
     
+    var isReseiving: Bool = true
+    
     // MARK: - UIViewController
 
     override func viewDidLoad() {
@@ -78,7 +80,7 @@ extension OperationListViewController: UICollectionViewDataSource, UICollectionV
         
         cell.nameString = "Sergey"
         cell.moneyString = "100.0"
-        cell.isReseiving = true
+        cell.isReseiving = isReseiving
         
         return cell
     }

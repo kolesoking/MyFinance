@@ -26,7 +26,7 @@ class NewOperationViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func saveOperationButtonPresed(_ sender: Any) {
+    @IBAction func saveOperationButtonPresed() {
         // TODO: - AddSaveService
         dismiss(animated: true)
     }
@@ -62,11 +62,25 @@ private extension NewOperationViewController {
         moneyTextField.textColor = Colors.mainTextColor
         moneyTextField.placeholder = "SUM"
         moneyTextField.font = .systemFont(ofSize: 18, weight: .light)
+        moneyTextField.returnKeyType = .done
+        moneyTextField.delegate = self
         
         saveOperationButton.backgroundColor = Colors.cellBackgroundColor
         saveOperationButton.layer.cornerRadius = 5
         saveOperationButton.setTitle("Cохранить", for: .normal)
         saveOperationButton.setTitleColor(Colors.mainTextColor, for: .normal)
         saveOperationButton.setTitleColor(Colors.olderTextColor, for: .highlighted)
+    }
+}
+
+extension NewOperationViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == moneyTextField {
+            saveOperationButtonPresed()
+        }
+        
+        return true
     }
 }
