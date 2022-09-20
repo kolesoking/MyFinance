@@ -17,6 +17,10 @@ class NewOperationViewController: UIViewController {
     @IBOutlet weak var saveOperationButton: UIButton!
     @IBOutlet weak var moneyLabel: UILabel!
     
+    // MARK: - Private Properties
+    
+    private var saveOperation = SaveOperation.shared
+    
     // MARK: - UIViewController
 
     override func viewDidLoad() {
@@ -26,10 +30,11 @@ class NewOperationViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func saveOperationButtonPresed() {
-        // TODO: - AddSaveService
+    @IBAction func saveOperationButtonPressed() {
+        saveNewOperation()
         dismiss(animated: true)
     }
+    
     
 }
 
@@ -71,6 +76,12 @@ private extension NewOperationViewController {
         saveOperationButton.setTitleColor(Colors.mainTextColor, for: .normal)
         saveOperationButton.setTitleColor(Colors.olderTextColor, for: .highlighted)
     }
+    
+    func saveNewOperation() {
+        let operation = OperationModel(name: "Kate", money: moneyTextField.text ?? "9999")
+        saveOperation.saveNewOperation(operation: operation)
+        print(saveOperation.saveOperations)
+    }
 }
 
 extension NewOperationViewController: UITextFieldDelegate {
@@ -78,7 +89,7 @@ extension NewOperationViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if textField == moneyTextField {
-            saveOperationButtonPresed()
+            saveOperationButtonPressed()
         }
         
         return true

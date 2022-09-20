@@ -23,7 +23,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var actionCollectionView: UICollectionView!
     @IBOutlet weak var lastOperationsTableView: UITableView!
     
+    // MARK: - Private Properties
     
+    private let saveOperation = SaveOperation.shared
     
     // MARK: - UIViewController
 
@@ -135,7 +137,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        saveOperation.saveOperations.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -144,10 +146,11 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = cell as? LastOperationTableViewCell else {
             return UITableViewCell()
         }
-        // TODO: - Add Operation Services
         
-        cell.money = "1000"
-        cell.name = "Sergey"
+        let operation = saveOperation.saveOperations[indexPath.row]
+        
+        cell.money = operation.money
+        cell.name = operation.name
         cell.isReseiving = true
         
         return cell
