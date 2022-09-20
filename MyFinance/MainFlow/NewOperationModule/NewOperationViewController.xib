@@ -14,7 +14,7 @@
                 <outlet property="moneyLabel" destination="0wd-rQ-jtc" id="Frd-fk-w2M"/>
                 <outlet property="moneyTextField" destination="K3G-Yn-uOw" id="JOk-2H-TS9"/>
                 <outlet property="operationSegmentedView" destination="5bA-Th-8xi" id="NtG-6T-N2W"/>
-                <outlet property="saveOperationButton" destination="00N-C6-dG7" id="JIY-vv-wx4"/>
+                <outlet property="saveOperationButton" destination="00N-C6-dG7" id="fck-ye-Scs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -46,7 +46,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain"/>
                     <connections>
-                        <action selector="saveOperationButtonPresed:" destination="-1" eventType="touchUpInside" id="N0H-0b-z52"/>
+                        <action selector="saveOperationButtonPressed" destination="-1" eventType="touchUpInside" id="F5E-5Z-cz7"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wd-rQ-jtc">

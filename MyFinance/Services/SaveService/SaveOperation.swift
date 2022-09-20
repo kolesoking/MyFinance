@@ -42,9 +42,7 @@ struct SaveOperation {
     
     // MARK: - Methods
     
-    mutating func saveNewOperation(name: String, money: String) {
-        
-        let operation = OperationModel.init(name: name, money: money)
+    mutating func saveNewOperation(operation: OperationModel) {
         
         saveOperations.append(operation)
     }
