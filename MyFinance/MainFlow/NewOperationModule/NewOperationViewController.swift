@@ -78,7 +78,7 @@ private extension NewOperationViewController {
     }
     
     func saveNewOperation() {
-        let operation = OperationModel(name: "Kate", money: moneyTextField.text ?? "9999")
+        let operation = OperationModel(name: "sergey", money: moneyTextField.text ?? "9999")
         saveOperation.saveNewOperation(operation: operation)
         print(saveOperation.saveOperations)
     }
