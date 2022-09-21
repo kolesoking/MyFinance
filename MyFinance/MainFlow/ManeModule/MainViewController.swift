@@ -35,6 +35,11 @@ class MainViewController: UIViewController {
         configureAppearance()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        lastOperationsTableView.reloadData()
+    }
+    
     // MARK: - Actions
     
 }

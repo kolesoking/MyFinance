@@ -47,7 +47,9 @@ struct SaveOperation {
         saveOperations.append(operation)
     }
     
-//    func deletOperation(
+    mutating func deletAllOperations() {
+        saveOperations.removeAll()
+    }
     
 }
 
